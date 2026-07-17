@@ -1,10 +1,8 @@
 from flask import Flask, render_template, send_from_directory
 
-from routes.auth import auth
-from routes.wardrobe import wardrobe
-from routes.ai import ai
-
-app = Flask(__name__, template_folder="templates")
+from backend.routes.auth import auth
+from backend.routes.wardrobe import wardrobe
+from backend.routes.ai import aiapp = Flask(__name__, template_folder="templates")
 
 app.register_blueprint(auth)
 app.register_blueprint(wardrobe)
