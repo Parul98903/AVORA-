@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Outfit Generator</title>
+</head>
+
+<body>
+
+<h1>👗 AI Outfit Generator</h1>
+
+<select id="occasion">
+
+<option>Casual</option>
+
+<option>Office</option>
+
+<option>Party</option>
+
+</select>
+
+<br><br>
+
+<button onclick="generateOutfit()">
+
+Generate Outfit
+
+</button>
+
+<hr>
+
+<div id="result"></div>
+
+<script>
+
+async function generateOutfit(){
+
+    const occasion=document.getElementById("occasion").value;
+
+    const response=await fetch("/generate-outfit",{
+
+        method:"POST",
+
+        headers:{
+            "Content-Type":"application/json"
+        },
+
+        body:JSON.stringify({
+
+            user_email:"parul@gmail.com",
+
+            occasion:occasion
+
+        })
+
+    });
+
+    const outfit=await response.json();
+
+    document.getElementById("result").innerHTML=
+
+        "<pre>"+JSON.stringify(outfit,null,4)+"</pre>";
+
+}
+
+</script>
+
+</body>
+
+</html>
