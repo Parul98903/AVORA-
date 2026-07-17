@@ -6,13 +6,28 @@ from pathlib import Path
 
 from pathlib import Path
 
+
 load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
 print("MONGO_URI =", os.getenv("MONGO_URI"))
-client = MongoClient(os.getenv("MONGO_URI"))
-db = client["avora"]
-users = db["users"]
+import os
+from dotenv import load_dotenv
+from pymongo import MongoClient
 
+load_dotenv()
+
+mongo_uri = os.getenv("MONGO_URI")
+
+print("Mongo URI:", mongo_uri)
+
+if not mongo_uri:
+    raise Exception("MONGO_URI is missing")
+
+client = MongoClient(mongo_uri)
+
+db = client["avora"]
+
+users = db["users"]
 auth = Blueprint("auth", __name__)
 
 @auth.route("/register", methods=["POST"])
