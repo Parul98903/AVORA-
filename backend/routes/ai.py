@@ -6,7 +6,7 @@ import os
 load_dotenv()
 
 client = MongoClient(os.getenv("MONGO_URI"))
-db = client["avora"]
+db = client[""]
 wardrobe = db["wardrobe"]
 
 ai = Blueprint("ai", __name__)

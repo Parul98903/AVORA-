@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 
-uri = "mongodb+srv://avoraadmin:FitMatch@avora-cluster.ux5f8vo.mongodb.net/avora?retryWrites=true&w=majority&appName=avora-cluster"
+uri = "mongodb+srv://The Style Algorithmadmin:FitMatch@The Style Algorithm-cluster.ux5f8vo.mongodb.net/The Style Algorithm?retryWrites=true&w=majority&appName=The Style Algorithm-cluster"
 
 try:
     client = MongoClient(uri, serverSelectionTimeoutMS=5000)

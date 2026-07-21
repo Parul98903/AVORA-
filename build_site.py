@@ -42,7 +42,7 @@ html = f'''<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AVORA — Your AI Styling Universe</title>
+  <title>The Style Algorithm — Your AI Styling Universe</title>
   <meta name="description" content="A modern pastel fashion-tech website that helps users make better outfit decisions using the clothes they already own." />
   <style>
     :root {{
@@ -256,7 +256,7 @@ html = f'''<!DOCTYPE html>
       <a class="brand" href="#top">
         <span class="brand-badge">✦</span>
         <span>
-          Avora
+          The Style Algorithm
           <small>AI Fashion • Smart Styling • Virtual Try-On</small>
         </span>
       </a>

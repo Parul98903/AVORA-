@@ -25,7 +25,7 @@ if not mongo_uri:
 
 client = MongoClient(mongo_uri)
 
-db = client["avora"]
+db = client["The Style Algorithm"]
 
 users = db["users"]
 auth = Blueprint("auth", __name__)
