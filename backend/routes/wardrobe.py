@@ -7,7 +7,7 @@ load_dotenv()
 print("MONGO_URI =", os.getenv("MONGO_URI"))
 
 client = MongoClient(os.getenv("MONGO_URI"))
-db = client[""]
+db = client["the_style_algorithm"]
 wardrobe_collection = db["wardrobe"]
 
 wardrobe = Blueprint("wardrobe", __name__)
